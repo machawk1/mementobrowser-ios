@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="RJL-pa-UG9">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--I Pad View Controller-->
+        <scene sceneID="Yz0-5b-ZRI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xb2-5f-iK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="gn5-AH-5KR" customClass="iPadViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JXd-5k-uSv">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jrm-7R-gto">
+                                <rect key="frame" x="0.0" y="916" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qQG-Ml-ly1"/>
+                                    <barButtonItem title="◄" style="plain" id="Uvu-eC-1xu">
+                                        <connections>
+                                            <action selector="goBack:" destination="gn5-AH-5KR" id="SAX-Qy-rDb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jdP-63-LhZ"/>
+                                    <barButtonItem title="►" style="plain" id="aEU-KP-unU">
+                                        <connections>
+                                            <action selector="goForward:" destination="gn5-AH-5KR" id="1Hg-Rc-4u0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Q85-pn-DPS"/>
+                                    <barButtonItem style="plain" systemItem="refresh" id="43l-R0-xCf">
+                                        <connections>
+                                            <action selector="reload:" destination="gn5-AH-5KR" id="ut9-Fj-qHq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TBi-hs-Rui"/>
+                                    <barButtonItem title="Menu" id="nGa-2Q-yby">
+                                        <connections>
+                                            <action selector="menuButton:" destination="gn5-AH-5KR" id="OPw-hv-hW5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="GJg-om-IFV">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem title="Date" id="sIL-Jt-8MF">
+                                        <connections>
+                                            <action selector="getDate:" destination="gn5-AH-5KR" id="kkV-Ni-MyK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fMO-m9-o0h"/>
+                                    <barButtonItem title="◄" style="plain" id="qlj-yQ-0SS">
+                                        <connections>
+                                            <action selector="previousMemento:" destination="gn5-AH-5KR" id="8k0-EV-9QP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KUU-EZ-YJe"/>
+                                    <barButtonItem title="►" style="plain" id="UJi-RT-K7d">
+                                        <connections>
+                                            <action selector="nextMemento:" destination="gn5-AH-5KR" id="lHT-ds-dEO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dbY-2S-UBj"/>
+                                    <barButtonItem title="Now" id="jZt-bn-xGR">
+                                        <connections>
+                                            <action selector="setDateToToday:" destination="gn5-AH-5KR" id="9QN-gj-hrA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" adjustsFontSizeToFit="NO" id="I81-gx-pV5">
+                                <rect key="frame" x="314" y="0.0" width="141" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <webView contentMode="scaleToFill" id="dEY-go-TBf">
+                                <rect key="frame" x="0.0" y="44" width="788" height="872"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gn5-AH-5KR" id="lcg-b0-m2z"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lVM-yh-71F">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" id="L35-ky-geR">
+                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" id="RiE-mT-zU8">
+                                <rect key="frame" x="7" y="6" width="550" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="editingDidBegin:" destination="gn5-AH-5KR" eventType="touchUpInside" id="QPM-fF-NZM"/>
+                                    <action selector="editingDidBegin:" destination="gn5-AH-5KR" eventType="editingDidBegin" id="vJt-4g-0A2"/>
+                                    <action selector="getURL:" destination="gn5-AH-5KR" eventType="editingDidEnd" id="2mp-d1-jsf"/>
+                                    <action selector="getURL:" destination="gn5-AH-5KR" eventType="editingDidEndOnExit" id="5ea-fE-bMb"/>
+                                </connections>
+                            </textField>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="URLtextField" destination="RiE-mT-zU8" id="le6-Gc-G51"/>
+                        <outlet property="btnActualDate" destination="I81-gx-pV5" id="yuV-9L-zeK"/>
+                        <outlet property="nextButton" destination="UJi-RT-K7d" id="CgO-ZS-jrt"/>
+                        <outlet property="nowButton" destination="jZt-bn-xGR" id="wcy-K1-X2B"/>
+                        <outlet property="openPicker" destination="sIL-Jt-8MF" id="yG3-M4-1hz"/>
+                        <outlet property="previousButton" destination="qlj-yQ-0SS" id="l5o-Ew-x2p"/>
+                        <outlet property="webView" destination="dEY-go-TBf" id="DCH-XO-DiO"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="773" y="-1078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9tE-kc-xvT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azH-Bs-A58" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="RJL-pa-UG9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lFX-XB-glh">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gn5-AH-5KR" kind="relationship" relationship="rootViewController" id="4im-FE-v4N"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-121" y="-1078"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="iPadViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="editingDidBegin:"/>
+                <relationship kind="action" name="firstMemento:"/>
+                <relationship kind="action" name="getDate:"/>
+                <relationship kind="action" name="getURL:"/>
+                <relationship kind="action" name="goBack:"/>
+                <relationship kind="action" name="goForward:"/>
+                <relationship kind="action" name="lastMemento:"/>
+                <relationship kind="action" name="menuButton:"/>
+                <relationship kind="action" name="nextMemento:"/>
+                <relationship kind="action" name="previousMemento:"/>
+                <relationship kind="action" name="reload:"/>
+                <relationship kind="action" name="setDateToToday:"/>
+                <relationship kind="outlet" name="URLtextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="btnActualDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="nowButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="openPicker" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="previousButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

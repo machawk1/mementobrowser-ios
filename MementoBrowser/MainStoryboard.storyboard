@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aLB-pk-bos">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="YFE-LT-GlO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem title="Date" id="TkH-O9-fw6">
+                                        <connections>
+                                            <action selector="getDate:" destination="2" id="uPy-dV-XWD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="13" style="plain" systemItem="fixedSpace" id="l8V-I9-TP1"/>
+                                    <barButtonItem title="◄" style="plain" id="clx-lt-GcL">
+                                        <inset key="imageInsets" minX="-1" minY="-1" maxX="-1" maxY="-1"/>
+                                        <connections>
+                                            <action selector="previousMemento:" destination="2" id="TvX-mE-vcJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SuR-9P-G29"/>
+                                    <barButtonItem title="►" style="plain" id="qsN-Yy-HDD">
+                                        <inset key="imageInsets" minX="-1" minY="-1" maxX="-1" maxY="-1"/>
+                                        <connections>
+                                            <action selector="nextMemento:" destination="2" id="ZzY-Sf-DxA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="13" style="plain" systemItem="fixedSpace" id="uuy-91-bNi"/>
+                                    <barButtonItem title="Now " id="AG0-yH-Soo">
+                                        <connections>
+                                            <action selector="setDateToToday:" destination="2" id="YKY-r8-eHl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" id="kd8-Zc-sSJ">
+                                <rect key="frame" x="0.0" y="44" width="320" height="284"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="h6c-2u-9TS"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="wLv-iu-YAs">
+                                <rect key="frame" x="0.0" y="328" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="G3l-Fn-Gco"/>
+                                    <barButtonItem title="◄" style="plain" id="Vae-SB-eqX">
+                                        <connections>
+                                            <action selector="goBack:" destination="2" id="cyD-C1-30c"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8qz-Cf-fNh"/>
+                                    <barButtonItem title="►" style="plain" id="PIX-dj-QdM">
+                                        <connections>
+                                            <action selector="goForward:" destination="2" id="6lO-i9-wMM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ynv-JE-SiX"/>
+                                    <barButtonItem style="plain" systemItem="refresh" id="RhF-Z7-XUk">
+                                        <connections>
+                                            <action selector="reload:" destination="2" id="bPD-WB-FiG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MQ6-o5-bDu"/>
+                                    <barButtonItem title="Menu" id="e59-mI-1AR">
+                                        <connections>
+                                            <action selector="menuButton:" destination="2" id="JfT-Fy-Nfa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="oR9-ew-wlJ">
+                                <rect key="frame" x="111" y="4" width="99" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="P7a-AR-HSh">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" id="6TQ-iC-dUr">
+                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="jKy-y8-73L">
+                                <rect key="frame" x="5" y="6" width="246" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="editingDidBegin:" destination="2" eventType="editingDidBegin" id="bET-tP-xTR"/>
+                                    <action selector="editingDidBegin:" destination="2" eventType="touchUpInside" id="h0z-F4-jcH"/>
+                                    <action selector="getURL:" destination="2" eventType="editingDidEndOnExit" id="jPg-9b-2jR"/>
+                                    <action selector="getURL:" destination="2" eventType="editingDidEnd" id="udC-jb-w4g"/>
+                                </connections>
+                            </textField>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="URLtextField" destination="jKy-y8-73L" id="p2h-2a-Edz"/>
+                        <outlet property="btnActualDate" destination="oR9-ew-wlJ" id="xvM-mv-Dkg"/>
+                        <outlet property="nextButton" destination="qsN-Yy-HDD" id="8px-mN-yO5"/>
+                        <outlet property="nowButton" destination="AG0-yH-Soo" id="uBB-hs-MgJ"/>
+                        <outlet property="openPicker" destination="TkH-O9-fw6" id="lbK-8A-Zm6"/>
+                        <outlet property="previousButton" destination="clx-lt-GcL" id="kaE-1y-EhK"/>
+                        <outlet property="webView" destination="kd8-Zc-sSJ" id="cak-yb-DOI"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="129" y="-102"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GL5-hy-uOZ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWB-ig-n3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="aLB-pk-bos" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="q57-rJ-PIs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="T51-Ep-5vF"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-368" y="-96"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="editingDidBegin:"/>
+                <relationship kind="action" name="firstMemento:"/>
+                <relationship kind="action" name="getDate:"/>
+                <relationship kind="action" name="getURL:"/>
+                <relationship kind="action" name="goBack:"/>
+                <relationship kind="action" name="goForward:"/>
+                <relationship kind="action" name="lastMemento:"/>
+                <relationship kind="action" name="menuButton:"/>
+                <relationship kind="action" name="nextMemento:"/>
+                <relationship kind="action" name="previousMemento:"/>
+                <relationship kind="action" name="reload:"/>
+                <relationship kind="action" name="setDateToToday:"/>
+                <relationship kind="outlet" name="URLtextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="btnActualDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="nowButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="openPicker" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="previousButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
